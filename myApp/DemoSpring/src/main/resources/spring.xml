@@ -7,13 +7,23 @@
 
 
     <bean id="dev" class="com.telusko.Dev">
-    </bean>
+        <!-- Setter Injection -->
+        <!-- <property name="age" value="12" /> -->
 
-    <bean id="dev2" class="com.telusko.Dev">
-    </bean>
+        <!-- Constructor Injection -->
+        <!-- <constructor-arg value="14" /> -->
+
+        <!-- <property name="laptop" ref="lap1" /> -->
+        <constructor-arg ref="lap1" />
 
 
-    <bean id="laptop" class="com.telusko.Laptop">
+</bean>
+
+<!--    <bean id="dev2" class="com.telusko.Dev">-->
+<!--    </bean>-->
+
+
+    <bean id="lap1" class="com.telusko.Laptop">
     </bean>
 
 
