@@ -11,7 +11,8 @@ public class App
 
         //Dev obj = new Dev();
         ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-        Dev obj = (Dev) context.getBean("dev");
+        //Dev obj = (Dev) context.getBean("dev");
+        Dev obj = context.getBean(Dev.class);
         //obj.setAge(18);
         //System.out.println(obj.getAge());
         obj.build();

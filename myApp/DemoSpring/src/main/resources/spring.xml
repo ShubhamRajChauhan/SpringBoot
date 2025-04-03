@@ -6,24 +6,38 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="dev" class="com.telusko.Dev">
-        <!-- Setter Injection -->
-        <!-- <property name="age" value="12" /> -->
+<!--    <bean id="dev" class="com.telusko.Dev">-->
+<!--        &lt;!&ndash; Setter Injection &ndash;&gt;-->
+<!--        &lt;!&ndash; <property name="age" value="12" /> &ndash;&gt;-->
 
-        <!-- Constructor Injection -->
-        <!-- <constructor-arg value="14" /> -->
+<!--        &lt;!&ndash; Constructor Injection &ndash;&gt;-->
+<!--        &lt;!&ndash; <constructor-arg value="14" /> &ndash;&gt;-->
 
-        <!-- <property name="laptop" ref="lap1" /> -->
-        <constructor-arg ref="lap1" />
+<!--        &lt;!&ndash; <property name="laptop" ref="lap1" /> &ndash;&gt;-->
+<!--        &lt;!&ndash; <constructor-arg ref="lap1" /> &ndash;&gt;-->
+<!--        -->
+<!--    </bean>-->
 
 
-</bean>
+    <!-- Autowire in Spring -->
+    <bean id="dev" class="com.telusko.Dev" autowire="byType">
+
+        <!-- <property name="com" ref="lap1" /> -->
+        <!-- <property name="com" ref="desk1" /> -->
+
+    </bean>
 
 <!--    <bean id="dev2" class="com.telusko.Dev">-->
 <!--    </bean>-->
 
 
-    <bean id="lap1" class="com.telusko.Laptop">
+<!--    <bean id="lap1" class="com.telusko.Laptop">-->
+<!--    </bean>-->
+
+    <bean id="com" class="com.telusko.Laptop" primary="true">
+    </bean>
+
+    <bean id="com1" class="com.telusko.Desktop">
     </bean>
 
 
